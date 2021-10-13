@@ -13,15 +13,21 @@ if (!connectionString) {
 const dbConnection = {
   2018: new Pool({
     connectionString: connectionString[2018],
-    ssl: !connectionString[2018].includes("localhost"),
+    ssl: {
+      rejectUnauthorized: false,
+    },
   }),
   "2019+2020": new Pool({
     connectionString: connectionString["2019+2020"],
-    ssl: !connectionString["2019+2020"].includes("localhost"),
+    ssl: {
+      rejectUnauthorized: false,
+    },
   }),
   2021: new Pool({
     connectionString: connectionString[2021],
-    ssl: !connectionString[2021].includes("localhost"),
+    ssl: {
+      rejectUnauthorized: false,
+    },
   }),
 };
 module.exports = (year = 2021) => dbConnection[year];
