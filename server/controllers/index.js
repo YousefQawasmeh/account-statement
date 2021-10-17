@@ -9,10 +9,12 @@ const addCustomer = require("./addCustomer");
 const getRecords2 = require("./getRecords2");
 const readExcel = require("./readExcel");
 const getRecordsUrl = require("./getRecordsUrl");
+const getAllCustomersTotals = require("./getAllCustomersTotals");
 
 router.get("/records/:customerName/:branch", getRecords);
 router.get("/records/:customerName", getRecords);
 router.get("/getRecordsUrl/:customerUrl", getRecordsUrl);
+router.get("/getAllCustomersTotals", getAllCustomersTotals);
 router.get("/getAllCustomers", getAllCustomers);
 router.post("/setNote", updateNote);
 router.post("/addRecord", addRecord);

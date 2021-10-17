@@ -23,6 +23,7 @@ const dbBuild = (year = 2021) => {
       throw err;
     });
 };
+// dbBuild();
 module.exports = dbBuild;
 // dbBuild();
 // dbConnection.query(createDataBase, (err, res) => {
